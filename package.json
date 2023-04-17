@@ -12,7 +12,14 @@
   "scripts": {
     "dev": "node scripts/watch.mjs",
     "prepare": "husky install",
-    "format":"pretty-quick --staged"
+    "format":"pretty-quick --staged",
+    "build:renderer":"cd packages/renderer && tsc && vite build",
+    "build:preload":"cd packages/preload && tsc && vite build",
+    "build:main":"cd packages/main && tsc && vite build",
+    "build":"turbo build:all",
+    "compile": "electron-builder build --config .electron-builder.config.js -mw"
+
+
   },
   "devDependencies": {
     "@loadable/component": "^5.15.3",

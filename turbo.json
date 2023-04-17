@@ -1,0 +1,24 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "pipeline": {
+        "build:main": {
+            "inputs": ["packages/main/**", "!packages/main/dist/**"],
+            "outputs": ["packages/main/dist/**"]
+        },
+        "build:preload": {
+            "inputs": ["packages/preload/**", "!packages/preload/dist/**"],
+            "outputs": ["packages/preload/dist/**"]
+        },
+        "build:renderer": {
+            "inputs": ["packages/renderer/**", "!packages/renderer/dist/**"],
+            "outputs": ["packages/renderer/dist/**"]
+        },
+        "build:all": {
+            "dependsOn": ["build:main", "build:preload", "build:renderer"]
+        },
+        "compile": {
+            "dependsOn": ["build:all"],
+            "outputs": ["dist/**"]
+        }
+    }
+}
