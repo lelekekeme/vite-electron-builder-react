@@ -16,8 +16,13 @@
         "build:all": {
             "dependsOn": ["build:main", "build:preload", "build:renderer"]
         },
+        "bytenode": {
+            "dependsOn": ["build:main"],
+            "inputs": ["packages/main/**", "!packages/main/dist/**"],
+            "outputs": ["packages/main/dist/**"]
+        },
         "compile": {
-            "dependsOn": ["build:all"],
+            "dependsOn": ["build:all", "bytenode"],
             "outputs": ["dist/**"]
         }
     }

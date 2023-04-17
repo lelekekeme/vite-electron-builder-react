@@ -1,6 +1,5 @@
 import { join } from 'node:path'
 import { injectAppVersion } from '../../version/inject-app-version-plugin.mjs'
-
 const PACKAGE_ROOT = __dirname
 const PROJECT_ROOT = join(PACKAGE_ROOT, '../..')
 
@@ -19,11 +18,9 @@ const config = {
     },
     build: {
         ssr: true,
-        sourcemap: 'inline',
         target: `node18`,
         outDir: 'dist',
         assetsDir: '.',
-        minify: process.env.MODE !== 'development',
         lib: {
             entry: 'src/index.ts',
             formats: ['cjs'],

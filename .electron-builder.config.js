@@ -10,12 +10,12 @@
  */
 module.exports = async function () {
     const { getVersion } = await import('./version/getVersion.mjs')
-
     return {
         directories: {
             output: 'dist',
             buildResources: 'buildResources',
         },
+        asar: false,
         files: ['packages/**/dist/**'],
         extraMetadata: {
             version: getVersion(),
