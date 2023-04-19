@@ -16,20 +16,28 @@
     "build:renderer": "cd packages/renderer && tsc && vite build",
     "build:preload": "cd packages/preload && tsc && vite build",
     "build:main": "cd packages/main && tsc && vite build",
-    "bytenode": "electron scripts/bytenode.js",
+    "bytenode": "ncc build packages/main/dist/index.cjs -o packages/main/dist -e electron && electron scripts/bytenode.js",
     "build": "turbo build:all",
-    "compile": "electron-builder build --config .electron-builder.config.js -mw"
+    "compile": "electron-builder build --config .electron-builder.config.js -w"
   },
   "devDependencies": {
     "@loadable/component": "^5.15.3",
+    "@types/adm-zip": "^0.5.0",
     "@types/loadable__component": "^5.13.4",
     "@types/node": "18.15.11",
     "@types/react": "^18.0.34",
     "@types/react-dom": "^18.0.11",
+    "@types/semver": "^7.3.13",
+    "@vercel/ncc": "^0.36.1",
     "@vitejs/plugin-react-swc": "^3.3.0",
+    "ajv": "^8.12.0",
+    "axios": "^1.3.5",
     "cross-env": "7.0.3",
     "electron": "24.1.2",
     "electron-builder": "23.6.0",
+    "electron-log": "^4.4.8",
+    "electron-store": "^8.1.0",
+    "electron-updater": "5.3.0",
     "eslint": "8.38.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
@@ -40,18 +48,15 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
     "sass": "^1.61.0",
+    "semver": "^7.4.0",
+    "sudo-prompt": "^9.2.1",
     "turbo": "^1.9.1",
     "typescript": "5.0.4",
     "unplugin-auto-expose": "0.0.4",
     "vite": "4.2.1"
   },
   "dependencies": {
-    "ajv": "^8.12.0",
-    "axios": "^1.3.5",
-    "bytenode": "^1.4.0",
-    "electron-log": "^4.4.8",
-    "electron-store": "^8.1.0",
-    "electron-updater": "5.3.0"
+    "bytenode": "^1.4.0"
   },
   "engines": {
     "pnpm": ">=8"

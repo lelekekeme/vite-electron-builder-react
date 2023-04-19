@@ -15,10 +15,22 @@ module.exports = async function () {
             output: 'dist',
             buildResources: 'buildResources',
         },
-        asar: false,
-        files: ['packages/**/dist/**'],
+        extraResources: ['update.exe'],
+        files: ['packages/**/dist/**', '!**/LICENSE'],
         extraMetadata: {
             version: getVersion(),
+        },
+        mac: {
+            target: 'dir',
+        },
+        win: {
+            target: 'nsis',
+        },
+        nsis: {
+            oneClick: false,
+            perMachine: true,
+            installerLanguages: 'zh_CN',
+            allowToChangeInstallationDirectory: true,
         },
     }
 }

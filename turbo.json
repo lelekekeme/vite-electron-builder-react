@@ -18,7 +18,11 @@
         },
         "bytenode": {
             "dependsOn": ["build:main"],
-            "inputs": ["packages/main/**", "!packages/main/dist/**"],
+            "inputs": [
+                "packages/main/**",
+                "!packages/main/dist/**",
+                "scripts/bytenode.js"
+            ],
             "outputs": ["packages/main/dist/**"]
         },
         "compile": {
