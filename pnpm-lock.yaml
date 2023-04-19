@@ -9,9 +9,6 @@ devDependencies:
     '@loadable/component':
         specifier: ^5.15.3
         version: 5.15.3(react@18.2.0)
-    '@types/adm-zip':
-        specifier: ^0.5.0
-        version: 0.5.0
     '@types/loadable__component':
         specifier: ^5.13.4
         version: 5.13.4
@@ -762,15 +759,6 @@ packages:
                 integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==,
             }
         engines: { node: '>= 10' }
-        dev: true
-
-    /@types/adm-zip@0.5.0:
-        resolution:
-            {
-                integrity: sha512-FCJBJq9ODsQZUNURo5ILAQueuA8WJhRvuihS3ke2iI25mJlfV2LK8jG2Qj2z2AWg8U0FtWWqBHVRetceLskSaw==,
-            }
-        dependencies:
-            '@types/node': 18.15.11
         dev: true
 
     /@types/cacheable-request@6.0.3:
