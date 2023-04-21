@@ -113,7 +113,31 @@ export class Updater {
                         this.log.log(stdout)
                     }
                 )
-                return true
+                // 如果是管理员模式，可以使用一下代码
+                // const child = spawn(
+                //     `move`,
+                //     [
+                //         '/Y',
+                //         `"${filePath}"`,
+                //         `"${resolve(process.resourcesPath, 'app.asar')}"`,
+                //     ],
+                //     {
+                //         shell: true,
+                //     }
+                // )
+                // child.unref()
+                // child.on('close', (code) => {
+                //     this.log.log('child process exit ' + code)
+                //     dialog.showMessageBox({
+                //         message: '更新成功',
+                //     })
+                //     app.relaunch()
+                //     app.exit(0)
+                // })
+                // child.on('error', (err) => {
+                //     this.log.error(err)
+                // })
+                // return true
             } else {
                 throw {
                     message: '更新文件内容已损坏，请尝试重新下载',
@@ -143,8 +167,8 @@ export class Updater {
                     dialog.showMessageBox({
                         message: '更新成功',
                     })
-                    app.exit(0)
                     app.relaunch()
+                    app.exit(0)
                 })
                 child.on('error', (err) => {
                     this.log.error(err)

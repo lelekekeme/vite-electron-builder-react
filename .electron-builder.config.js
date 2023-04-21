@@ -22,8 +22,15 @@ module.exports = async function () {
         mac: {
             target: 'dir',
         },
+        // 如果使用ia32架构，需要在windows上打包应用，需要注意electron要使用32位版本
+        // pnpm add --config.arch=ia32  electron -D
+        // https://github.com/bytenode/bytenode/issues/98#issuecomment-758606113
         win: {
-            target: 'nsis',
+            target: {
+                target: 'nsis',
+                arch: ['ia32'],
+            },
+            requestedExecutionLevel: 'requireAdministrator',
         },
 
         nsis: {
@@ -32,6 +39,7 @@ module.exports = async function () {
             installerLanguages: 'zh_CN',
             allowToChangeInstallationDirectory: true,
         },
+
         async afterPack(context) {
             const name =
                 process.env.npm_package_productName ||

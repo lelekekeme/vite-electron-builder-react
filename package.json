@@ -16,9 +16,9 @@
     "build:renderer": "cd packages/renderer && tsc && vite build",
     "build:preload": "cd packages/preload && tsc && vite build",
     "build:main": "cd packages/main && tsc && vite build",
-    "bytenode": "ncc build packages/main/dist/index.cjs -o packages/main/dist -e electron && electron scripts/bytenode.js",
+    "bytenode": "ncc build packages/main/dist/index.cjs -o packages/main/dist -e electron && cross-env npm_config_arch=ia32 electron scripts/bytenode.js",
     "build": "turbo build:all",
-    "compile": "electron-builder build --config .electron-builder.config.js -mw"
+    "compile": "electron-builder build --config .electron-builder.config.js -w"
   },
   "devDependencies": {
     "@loadable/component": "^5.15.3",
