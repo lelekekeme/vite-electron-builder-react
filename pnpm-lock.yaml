@@ -29,7 +29,7 @@ devDependencies:
         version: 0.36.1
     '@vitejs/plugin-react-swc':
         specifier: ^3.3.0
-        version: 3.3.0(vite@4.2.1)
+        version: 3.3.0(vite@4.3.3)
     ajv:
         specifier: ^8.12.0
         version: 8.12.0
@@ -100,8 +100,8 @@ devDependencies:
         specifier: 0.0.4
         version: 0.0.4
     vite:
-        specifier: 4.2.1
-        version: 4.2.1(@types/node@18.15.11)(sass@1.62.1)
+        specifier: 4.3.3
+        version: 4.3.3(@types/node@18.15.11)(sass@1.62.1)
 
 packages:
     /7zip-bin@5.1.1:
@@ -961,7 +961,7 @@ packages:
         hasBin: true
         dev: true
 
-    /@vitejs/plugin-react-swc@3.3.0(vite@4.2.1):
+    /@vitejs/plugin-react-swc@3.3.0(vite@4.3.3):
         resolution:
             {
                 integrity: sha512-Ycg+n2eyCOTpn/wRy+evVo859+hw7qCj9iaX5CMny6x1fx1Uoq0xBG+a98lFtwLNGfGEnpI0F26YigRuxCRkwg==,
@@ -970,7 +970,7 @@ packages:
             vite: ^4
         dependencies:
             '@swc/core': 1.3.55
-            vite: 4.2.1(@types/node@18.15.11)(sass@1.62.1)
+            vite: 4.3.3(@types/node@18.15.11)(sass@1.62.1)
         transitivePeerDependencies:
             - '@swc/helpers'
         dev: true
@@ -4341,18 +4341,6 @@ packages:
         engines: { node: '>=4' }
         dev: true
 
-    /resolve@1.22.2:
-        resolution:
-            {
-                integrity: sha512-Sb+mjNHOULsBv818T40qSPeRiuWLyaGMa5ewydRLFimneixmVy2zdivRl+AF6jaYPC8ERxGDmFSiqui6SfPd+g==,
-            }
-        hasBin: true
-        dependencies:
-            is-core-module: 2.12.0
-            path-parse: 1.0.7
-            supports-preserve-symlinks-flag: 1.0.0
-        dev: true
-
     /resolve@2.0.0-next.4:
         resolution:
             {
@@ -5095,10 +5083,10 @@ packages:
         dev: true
         optional: true
 
-    /vite@4.2.1(@types/node@18.15.11)(sass@1.62.1):
+    /vite@4.3.3(@types/node@18.15.11)(sass@1.62.1):
         resolution:
             {
-                integrity: sha512-7MKhqdy0ISo4wnvwtqZkjke6XN4taqQ2TBaTccLIpOKv7Vp2h4Y+NpmWCnGDeSvvn45KxvWgGyb0MkHvY1vgbg==,
+                integrity: sha512-MwFlLBO4udZXd+VBcezo3u8mC77YQk+ik+fbc0GZWGgzfbPP+8Kf0fldhARqvSYmtIWoAJ5BXPClUbMTlqFxrA==,
             }
         engines: { node: ^14.18.0 || >=16.0.0 }
         hasBin: true
@@ -5126,7 +5114,6 @@ packages:
             '@types/node': 18.15.11
             esbuild: 0.17.18
             postcss: 8.4.23
-            resolve: 1.22.2
             rollup: 3.21.0
             sass: 1.62.1
         optionalDependencies:

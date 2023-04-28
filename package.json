@@ -52,7 +52,7 @@
     "turbo": "^1.9.3",
     "typescript": "5.0.4",
     "unplugin-auto-expose": "0.0.4",
-    "vite": "4.2.1"
+    "vite": "4.3.3"
   },
   "dependencies": {
     "bytenode": "^1.4.1"
