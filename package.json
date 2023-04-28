@@ -24,13 +24,13 @@
     "@loadable/component": "^5.15.3",
     "@types/loadable__component": "^5.13.4",
     "@types/node": "18.15.11",
-    "@types/react": "^18.0.34",
-    "@types/react-dom": "^18.0.11",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
     "@types/semver": "^7.3.13",
     "@vercel/ncc": "^0.36.1",
     "@vitejs/plugin-react-swc": "^3.3.0",
     "ajv": "^8.12.0",
-    "axios": "^1.3.5",
+    "axios": "^1.4.0",
     "cross-env": "7.0.3",
     "electron": "24.1.2",
     "electron-builder": "23.6.0",
@@ -40,14 +40,14 @@
     "eslint": "8.38.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^8.0.0",
-    "prettier": "^2.8.7",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.8",
     "pretty-quick": "^3.1.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
-    "sass": "^1.61.0",
-    "semver": "^7.4.0",
+    "sass": "^1.62.1",
+    "semver": "^7.5.0",
     "sudo-prompt": "^9.2.1",
     "turbo": "^1.9.3",
     "typescript": "5.0.4",
@@ -55,7 +55,7 @@
     "vite": "4.2.1"
   },
   "dependencies": {
-    "bytenode": "^1.4.0"
+    "bytenode": "^1.4.1"
   },
   "engines": {
     "pnpm": ">=8"
